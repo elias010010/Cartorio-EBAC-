@@ -45,7 +45,7 @@ int registro()
 	file = fopen(arquivo, "a");
 	fprintf(file,sobrenome);
 	fclose(file);
-	
+	 
 	file = fopen(arquivo, "a");
 	fprintf(file, ",");
 	fclose(file);
@@ -127,6 +127,7 @@ int main()
 		printf("\t1 - Registrar nomes\n");
 		printf("\t2 - Consultar nomes\n");
 		printf("\t3 - Deletar nomes\n"); 
+		printf("\t4 - Sair do sistema\n\n");
 		printf("Opção:"); //Final do menu 
 	
 		scanf("%d" , &opcao);  //Armazenando informações(escolha do usuario)
@@ -146,6 +147,11 @@ int main()
 		
 		case 3:
 		deletar();
+		break;
+		
+		case 4:
+		printf("Obrigado por usar o nosso sistema!\n");
+		return 0;
 		break;
 		
 		default:
